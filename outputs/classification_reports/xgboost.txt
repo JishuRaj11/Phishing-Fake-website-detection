@@ -1,0 +1,10 @@
+XGBoost
+
+              precision    recall  f1-score   support
+
+    phishing   0.999750  0.995374  0.997557     20104
+  legitimate   0.996563  0.999815  0.998186     26970
+
+    accuracy                       0.997918     47074
+   macro avg   0.998157  0.997594  0.997872     47074
+weighted avg   0.997924  0.997918  0.997918     47074

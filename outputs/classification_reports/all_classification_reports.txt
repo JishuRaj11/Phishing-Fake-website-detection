@@ -1,0 +1,34 @@
+Random Forest
+
+              precision    recall  f1-score   support
+
+    phishing   0.999501  0.995523  0.997508     20104
+  legitimate   0.996673  0.999629  0.998149     26970
+
+    accuracy                       0.997876     47074
+   macro avg   0.998087  0.997576  0.997828     47074
+weighted avg   0.997880  0.997876  0.997875     47074
+
+
+XGBoost
+
+              precision    recall  f1-score   support
+
+    phishing   0.999750  0.995374  0.997557     20104
+  legitimate   0.996563  0.999815  0.998186     26970
+
+    accuracy                       0.997918     47074
+   macro avg   0.998157  0.997594  0.997872     47074
+weighted avg   0.997924  0.997918  0.997918     47074
+
+
+Logistic Regression
+
+              precision    recall  f1-score   support
+
+    phishing   0.999850  0.994976  0.997407     20104
+  legitimate   0.996269  0.999889  0.998075     26970
+
+    accuracy                       0.997791     47074
+   macro avg   0.998059  0.997432  0.997741     47074
+weighted avg   0.997798  0.997791  0.997790     47074

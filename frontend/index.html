@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhishGuard AI - Website Safety Check</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="brand-mark" aria-hidden="true">PG</div>
+      <p class="eyebrow">URL-based phishing detection</p>
+      <h1>PhishGuard AI</h1>
+      <h2>Check Whether a Website Is Safe</h2>
+      <p class="intro">Analyze website URLs using machine learning to detect potential phishing threats.</p>
+    </section>
+
+    <section class="checker" aria-label="URL safety check">
+      <form id="urlForm" novalidate>
+        <label class="sr-only" for="urlInput">Website URL</label>
+        <div class="input-row">
+          <input
+            id="urlInput"
+            name="url"
+            type="text"
+            placeholder="Enter website URL here..."
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            inputmode="url"
+            maxlength="2048"
+            aria-describedby="formError"
+          >
+          <button type="submit" id="analyzeBtn" class="btn btn-primary">
+            <span class="spinner" aria-hidden="true"></span>
+            <span id="analyzeBtnText">Analyze URL</span>
+          </button>
+          <button type="button" id="clearBtn" class="btn btn-ghost">Clear</button>
+        </div>
+      </form>
+
+      <p id="formError" class="error-message" role="alert" hidden></p>
+
+      <div id="loadingStatus" class="loading-status" role="status" aria-live="polite" hidden>
+        <span class="loading-dot" aria-hidden="true"></span>
+        Analyzing URL text with the model...
+      </div>
+    </section>
+
+    <section id="result" class="result" aria-live="polite" hidden>
+      <div id="resultBanner" class="result-banner">
+        <div class="result-copy">
+          <p class="result-kicker">Backend prediction</p>
+          <h3 id="resultTitle"></h3>
+          <p id="resultUrl" class="result-url"></p>
+        </div>
+        <span id="predictionPill" class="prediction-pill"></span>
+      </div>
+
+      <div class="confidence-row">
+        <span>Model confidence</span>
+        <strong id="confidenceValue"></strong>
+      </div>
+
+      <p class="disclaimer">
+        Feature values are indicators used by the ML model, not proof that a website is malicious.
+        PhishGuard AI analyzes the URL text only; it does not open or visit the website.
+      </p>
+
+      <details class="features" open>
+        <summary>URL-based checks performed <span id="featureCount"></span></summary>
+        <div id="featuresGrid" class="features-grid"></div>
+      </details>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

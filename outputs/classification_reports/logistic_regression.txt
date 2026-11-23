@@ -1,0 +1,10 @@
+Logistic Regression
+
+              precision    recall  f1-score   support
+
+    phishing   0.999850  0.994976  0.997407     20104
+  legitimate   0.996269  0.999889  0.998075     26970
+
+    accuracy                       0.997791     47074
+   macro avg   0.998059  0.997432  0.997741     47074
+weighted avg   0.997798  0.997791  0.997790     47074

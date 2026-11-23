@@ -1,0 +1,10 @@
+Random Forest
+
+              precision    recall  f1-score   support
+
+    phishing   0.999501  0.995523  0.997508     20104
+  legitimate   0.996673  0.999629  0.998149     26970
+
+    accuracy                       0.997876     47074
+   macro avg   0.998087  0.997576  0.997828     47074
+weighted avg   0.997880  0.997876  0.997875     47074

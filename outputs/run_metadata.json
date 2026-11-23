@@ -1,0 +1,154 @@
+{
+  "source_csv": "C:\\Users\\Jishu Raj\\OneDrive\\Pictures\\Desktop\\Phising Fake website detection\\dataset\\PhiUSIIL_Phishing_URL_Dataset.csv",
+  "dataset_shape": {
+    "rows": 235795,
+    "columns": 56
+  },
+  "missing_values": {},
+  "duplicates": {
+    "exact_duplicate_rows": 0,
+    "repeated_url_values": 425,
+    "conflicting_url_labels": 0
+  },
+  "target_counts": {
+    "0": 100945,
+    "1": 134850
+  },
+  "column_classification": {
+    "raw_url_present": true,
+    "identifier_columns": [
+      "FILENAME"
+    ],
+    "content_derived_columns": [
+      "LineOfCode",
+      "LargestLineLength",
+      "HasTitle",
+      "Title",
+      "DomainTitleMatchScore",
+      "URLTitleMatchScore",
+      "HasFavicon",
+      "Robots",
+      "IsResponsive",
+      "NoOfURLRedirect",
+      "NoOfSelfRedirect",
+      "HasDescription",
+      "NoOfPopup",
+      "NoOfiFrame",
+      "HasExternalFormSubmit",
+      "HasSocialNet",
+      "HasSubmitButton",
+      "HasHiddenFields",
+      "HasPasswordField",
+      "Bank",
+      "Pay",
+      "Crypto",
+      "HasCopyrightInfo",
+      "NoOfImage",
+      "NoOfCSS",
+      "NoOfJS",
+      "NoOfSelfRef",
+      "NoOfEmptyRef",
+      "NoOfExternalRef"
+    ],
+    "dataset_url_derived_columns": [
+      "URLLength",
+      "DomainLength",
+      "IsDomainIP",
+      "URLSimilarityIndex",
+      "CharContinuationRate",
+      "TLDLegitimateProb",
+      "URLCharProb",
+      "TLDLength",
+      "NoOfSubDomain",
+      "HasObfuscation",
+      "NoOfObfuscatedChar",
+      "ObfuscationRatio",
+      "NoOfLettersInURL",
+      "LetterRatioInURL",
+      "NoOfDegitsInURL",
+      "DegitRatioInURL",
+      "NoOfEqualsInURL",
+      "NoOfQMarkInURL",
+      "NoOfAmpersandInURL",
+      "NoOfOtherSpecialCharsInURL",
+      "SpacialCharRatioInURL",
+      "IsHTTPS"
+    ]
+  },
+  "cleaning": {
+    "rows_before": 235795,
+    "rows_after": 235370,
+    "blank_urls_removed": 0,
+    "invalid_labels_removed": 0,
+    "exact_duplicates_removed": 0,
+    "repeated_urls_removed": 425
+  },
+  "url_feature_columns": [
+    "url_length",
+    "hostname_length",
+    "path_length",
+    "query_length",
+    "fragment_length",
+    "path_depth",
+    "num_dots",
+    "num_hyphens",
+    "num_underscores",
+    "num_slashes",
+    "num_question_marks",
+    "num_ampersands",
+    "num_equals",
+    "num_at",
+    "num_percent",
+    "num_hash",
+    "num_letters",
+    "num_digits",
+    "letter_ratio",
+    "digit_ratio",
+    "num_special_chars",
+    "special_char_ratio",
+    "num_query_params",
+    "is_https",
+    "is_http",
+    "has_port",
+    "is_ip_address",
+    "has_at_in_netloc",
+    "has_double_slash_in_path",
+    "subdomain_count",
+    "has_www",
+    "hostname_digit_count",
+    "hostname_hyphen_count",
+    "max_label_length",
+    "tld_length",
+    "hostname_entropy",
+    "url_entropy",
+    "percent_encoded_count",
+    "has_punycode",
+    "suspicious_keyword_count",
+    "has_shortener",
+    "has_fragment",
+    "tld",
+    "scheme"
+  ],
+  "extracted_feature_shape": [
+    235370,
+    44
+  ],
+  "processed_shapes": {
+    "train": [
+      188296,
+      309
+    ],
+    "test": [
+      47074,
+      309
+    ]
+  },
+  "split": {
+    "method": "StratifiedGroupKFold first fold",
+    "groups": "hostname",
+    "test_size_requested": 0.2,
+    "seed": 42,
+    "hostname_overlap": 0
+  },
+  "model_trained": false
+}

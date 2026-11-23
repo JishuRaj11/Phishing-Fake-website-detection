@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.env.*
+
+dataset/*.csv
+
+outputs/X_train.npz
+outputs/X_test.npz
+outputs/split_indices.npz
+outputs/y_train.csv
+outputs/y_test.csv
+outputs/models/random_forest.joblib
