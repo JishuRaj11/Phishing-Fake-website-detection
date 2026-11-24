@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/predict";
+const API_URL = "https://phishing-guard-ai-backend.onrender.com/predict";
 
 const FEATURE_META = [
   { key: "url_length", label: "URL length", note: "Total characters in the submitted URL string." },
